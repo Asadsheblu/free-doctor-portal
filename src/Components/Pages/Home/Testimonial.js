@@ -47,8 +47,8 @@ const Testimonial = () => {
           
             {
                 review.map(testi=><div  key={testi._id}>
-                    <div class="card w-96 bg-base-100 shadow-xl">
-  <div class="card-body">
+                    <div className="card w-96 bg-base-100 shadow-xl">
+  <div className="card-body">
     
     <p>{testi?.description}</p>
     <div className="flex pt-5">

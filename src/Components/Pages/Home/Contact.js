@@ -7,27 +7,27 @@ const Contact = () => {
             <h3 className='text-2xl text-center text-white'>Stay connected with us</h3>
             <div>
             
-  <div class="hero-content w-full flex-col lg:flex-row-reverse">
+  <div className="hero-content w-full flex-col lg:flex-row-reverse">
   
-    <div class="card flex-shrink-0 w-full h-full max-w-sm shadow-2xl bg-base-100">
-      <div class="card-body">
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">Email</span>
+    <div className="card flex-shrink-0 w-full h-full max-w-sm shadow-2xl bg-base-100">
+      <div className="card-body">
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Email</span>
           </label>
-          <input type="text" placeholder="email" class="input input-bordered" />
+          <input type="text" placeholder="email" className="input input-bordered" />
         </div>
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">Password</span>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Password</span>
           </label>
-          <input type="text" placeholder="password" class="input input-bordered" />
-          <label class="label">
-            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+          <input type="text" placeholder="password" className="input input-bordered" />
+          <label className="label">
+            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
         </div>
-        <div class="form-control mt-6">
-          <button class="btn btn-primary">Login</button>
+        <div className="form-control mt-6">
+          <button className="btn btn-primary">Login</button>
         </div>
       </div>
     </div>
