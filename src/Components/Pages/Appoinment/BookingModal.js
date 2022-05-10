@@ -1,6 +1,6 @@
 import React from 'react';
-
-const BookingModal = ({modal,setModal}) => {
+import { format } from 'date-fns';
+const BookingModal = ({modal,setModal,date}) => {
     const {title,slot}=modal
     const handelSubmit=(e)=>{
        e.preventDefault()
@@ -24,7 +24,7 @@ const BookingModal = ({modal,setModal}) => {
       <h4 className='text-xl text-center text-secondary font-bold py-4'>Booking For {title}</h4>
       <form onSubmit={handelSubmit}>
       <div className="card-body">
-     
+      <input type="text"value={format(date, 'PP')} className="input input-bordered" required/>
           <label className="label">
             <span className="label-text">Patient's Name</span>
           </label>
@@ -42,7 +42,7 @@ const BookingModal = ({modal,setModal}) => {
           <select name="slot" class="select select-bordered w-full max-w-xs">
           <option disabled selected>Serial</option>
           {
-              slot.map(slots=><option value={slots}>{slots}</option>)
+              slot?.map(slots=><option value={slots}>{slots}</option>)
           }
 
   
@@ -67,7 +67,7 @@ const BookingModal = ({modal,setModal}) => {
           </label>
           {/* <textarea name="problem" type="number" placeholder="problem description" className="input input-bordered" required /> */}
      
-        <input type="submit" value="Submit" />
+        <input  className='btn btn-primary' type="submit" value="Submit" />
         
        
       </div>
