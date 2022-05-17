@@ -8,9 +8,9 @@ const Cards = () => {
 
        
        
-<div className="card lg:card-side bg-base-100 shadow-xl bg-primary">
+<div className="card lg:card-side bg-base-100 shadow-xl bg-success">
   <figure><img src={phone} alt="Album" className='p-4' /></figure>
-  <div className="card-body">
+  <div className="card-body text-white">
     <h2 className="card-title">New album is released!</h2>
     <p>Click the button to listen on Spotiwhy app.</p>
     <div className="card-actions justify-end">
@@ -18,7 +18,7 @@ const Cards = () => {
     </div>
   </div>
 </div>
-<div className="card lg:card-side bg-base-100 shadow-xl bg-accent">
+<div className="card lg:card-side bg-base-100 shadow-xl bg-info">
   <figure><img src={time} alt="Album" className='p-4' /></figure>
   <div className="card-body text-white">
     <h2 className="card-title">New album is released!</h2>
@@ -28,9 +28,9 @@ const Cards = () => {
     </div>
   </div>
 </div>
-<div className="card lg:card-side bg-base-100 shadow-xl bg-secondary">
+<div className="card lg:card-side bg-base-100 shadow-xl bg-success">
   <figure><img src={marker} alt="Album" className='p-4' /></figure>
-  <div className="card-body">
+  <div className="card-body text-white">
     <h2 className="card-title">New album is released!</h2>
     <p>Click the button to listen on Spotiwhy app.</p>
     <div className="card-actions justify-end">
