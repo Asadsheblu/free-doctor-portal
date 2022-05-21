@@ -14,6 +14,10 @@ import Review from './Components/Dashboard/Review';
 import User from './Components/Dashboard/User';
 import Dashboard from './Components/Dashboard/Dashboard';
 import RequireAdmin from './Components/Pages/Signup/RequireAuth/RequireAdmin';
+import AddDoctor from './Components/Dashboard/AddDoctor';
+import OurDoctor from './Components/Pages/OurDoctor';
+import Managedoctor from './Components/Pages/Managedoctor';
+import Payment from './Components/Dashboard/Payment';
 
 function App() {
   return (
@@ -25,6 +29,10 @@ function App() {
       <Route path='/appoinment' element={<RequireAuth>
         <Appoinment/>
       </RequireAuth>}></Route>
+      <Route path="/payment/:id" element={<Payment></Payment>}></Route>
+      <Route path='/doctor' element={<RequireAuth>
+        <OurDoctor/>
+      </RequireAuth>}></Route>
       <Route path='/myappoinment' element={<Myappoinment />
     }></Route>
       <Route path='/dashboard' element={<RequireAuth>
@@ -32,9 +40,18 @@ function App() {
       </RequireAuth>}>
         <Route index element={<Myserial />}></Route>
         <Route path="review" element={<Review />}></Route>
-        <Route path="user" element={<RequireAdmin>
+        <Route path="user" element={
+
           <User />
-        </RequireAdmin>}></Route>
+        }></Route>
+        
+        <Route path="addDoctor" element={
+          <AddDoctor />
+        }></Route>
+        <Route path="managed" element={
+          <Managedoctor />
+        }></Route>
+        
       </Route>
       <Route path='/signUp' element={<Signup />}></Route>
       

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
 const Myappoinment = () => {
@@ -26,9 +27,11 @@ const Myappoinment = () => {
                     <div class="card w-96 bg-primary text-primary-content">
   <div class="card-body">
     <h2 class="card-title">{my?.name}</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <p>{my?.problem}</p>
+    <h4 className="text-2xl">${my?.price}</h4>
     <div class="card-actions justify-end">
-      <button class="btn">Buy Now</button>
+      {(my?.price && !my?.paid)&&<Link to={`/payment/${my?._id}`}> <button class="btn">Pay</button></Link>}
+      {(my?.price && my?.paid)&& <button disabled class="btn">Paid</button>}
     </div>
   </div>
 </div>

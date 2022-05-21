@@ -22,7 +22,7 @@ const AppoinmentLists = ({date}) => {
 
   <div className="card-body items-center text-center">
     <h2 className="card-title text-secondary">{lists?.name}</h2>
- 
+                        <p className="text-center text-xl">${lists?.price}</p>
     <h4 className='text-xl'>
         {
             lists?.slots?.length > 0 

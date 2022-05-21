@@ -5,7 +5,7 @@ import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
 const BookingModal = ({modal,setModal,date}) => {
 
-    const {_id,name,slots}=modal
+    const {_id,name,slots,price}=modal
     const [user]=useAuthState(auth)
     const formattedDate = format(date, 'PP');
     const handelSerial=(e)=>{
@@ -16,7 +16,9 @@ const BookingModal = ({modal,setModal,date}) => {
         const slot=e.target.slot.value;
         const age=e.target.age.value;
        const problem=e.target.problem.value
-        const details={name,number,email,slot,age,problem}
+      const price=e.target.price.value
+        const details={name,number,email,slot,age,problem,price}
+        
         console.log(details);
         setModal(null)
         fetch("http://localhost:5500/patients",{
@@ -58,6 +60,12 @@ const BookingModal = ({modal,setModal,date}) => {
             <span className="label-text">Patient's Number</span>
           </label>
           <input name="number" type="text"  className="input input-bordered" required/>
+    
+   
+          <label className="label">
+            <span className="label-text">Price</span>
+          </label>
+          <input name="price" type="text" value={price}  className="input input-bordered" required/>
     
           <label className="label">
             <span className="label-text">Serial Time</span>

@@ -38,6 +38,7 @@ const Header = () => {
        <li><Link to="/about">About</Link></li>
       <li><Link to="/appoinment">Appoinmoint</Link></li>
       <li><Link to="/myappoinment">My Appoinmoint</Link></li>
+      <li><Link to="/doctor">Our Doctors</Link></li>
       
       <li><Link to="/contact">Contact Us</Link></li>
       <li>
@@ -82,7 +83,7 @@ const Header = () => {
     <li><Link to="/">Home</Link></li>
     <li><Link to="/about">About</Link></li>
       <li><Link to="/appoinment">Appoinmoint</Link></li>
-   
+      <li><Link to="/doctor">Our Doctors</Link></li>
       <li><Link to="/contact">Contact Us</Link></li>
       <li>
         {user &&

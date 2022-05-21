@@ -4,8 +4,8 @@ import  {Link,Outlet} from "react-router-dom";
 import auth from '../../firebase.init';
 import useAdmin from '../../Hook/useAdmin';
 const Dashboard = () => {
-  const [user]=useAuthState(auth)
-  const [admin]=useAdmin(user)
+  const [user] = useAuthState(auth);
+  const [admin] = useAdmin(user);
     return (
        <div>
         <div class="drawer drawer-mobile">
@@ -21,7 +21,21 @@ const Dashboard = () => {
      
       <li><Link to="/dashboard">Serial</Link></li>
       <li><Link to="/dashboard/review">Review</Link></li>
-      <li>{admin && <Link to="/dashboard/user">User</Link>}</li>
+     {
+      admin? 
+      
+<li><Link to="/dashboard/addDoctor">Add a Doctor</Link></li>
+:
+<>
+<li><Link to="/dashboard/user">All Users</Link></li>
+<li><Link to="/dashboard/addDoctor">Add a Doctor</Link></li>
+<li><Link to="/dashboard/managed">Manage Doctor</Link></li>
+</>                    
+                        
+     }
+                        
+                        
+                   
     </ul>
   
   </div>
